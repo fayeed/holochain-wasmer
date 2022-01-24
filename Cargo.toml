@@ -1,3 +1,10 @@
 [workspace]
-members = ["crates/host", "crates/common"]
-exclude = ["test"]
+members = [
+    "crates/host", "crates/common",
+    "crates/guest",
+    "test",
+    "test/*wasm*",
+]
+exclude = [
+    "test/**",
+]

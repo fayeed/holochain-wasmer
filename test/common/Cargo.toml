@@ -13,3 +13,6 @@ path = "src/common.rs"
 holochain_wasmer_common = { path = "../../crates/common" }
 serde = "=1.0.123"
 serde_bytes = "0.11"
+
+[dev-dependencies]
+holochain_wasmer_common = { path = "../../crates/common", features = [ "scopetracker_allocator" ]}
