@@ -2,21 +2,11 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+# [Unreleased]
 
-### Added
+- Fix compiler issue by pinning all wasmer crates. [#71](https://github.com/holochain/holochain-wasmer/pull/71)
 
-### Changed
-
-### Deprecated
-
-### Removed
-
-### Fixed
-
-### Security
-
-## [0.0.73] - 2021-07-20
+# [0.0.73] - 2021-07-20
 
 ### Added
 
@@ -32,7 +22,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.72] - 2021-07-02
+# [0.0.72] - 2021-07-02
 
 ### Added
 
@@ -48,7 +38,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.71] - 2021-06-23
+# [0.0.71] - 2021-06-23
 
 ### Added
 
@@ -73,7 +63,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.67] - 2021-02-21
+# [0.0.67] - 2021-02-21
 
 ### Added
 
@@ -87,7 +77,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.66] - 2021-02-09
+# [0.0.66] - 2021-02-09
 
 ### Added
 
@@ -101,7 +91,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.65] - 2021-02-02
+# [0.0.65] - 2021-02-02
 
 ### Added
 
@@ -115,7 +105,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.64] - 2021-01-20
+# [0.0.64] - 2021-01-20
 
 ### Added
 
@@ -133,7 +123,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.54] - 2021-01-06
+# [0.0.54] - 2021-01-06
 
 ### Added
 
@@ -147,7 +137,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.53] - 2021-01-06
+# [0.0.53] - 2021-01-06
 
 ### Added
 
@@ -161,7 +151,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.53] - 2020-12-22
+# [0.0.53] - 2020-12-22
 
 ### Added
 
@@ -175,7 +165,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.52] - 2020-12-17
+# [0.0.52] - 2020-12-17
 
 ### Added
 
@@ -189,7 +179,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.51] - 2020-12-16
+# [0.0.51] - 2020-12-16
 
 ### Added
 
@@ -203,7 +193,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.50] - 2020-11-19
+# [0.0.50] - 2020-11-19
 
 ### Added
 
@@ -217,7 +207,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.49] - 2020-11-19
+# [0.0.49] - 2020-11-19
 
 ### Added
 
@@ -231,7 +221,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.48] - 2020-11-16
+# [0.0.48] - 2020-11-16
 
 ### Added
 
@@ -245,7 +235,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.47] - 2020-10-29
+# [0.0.47] - 2020-10-29
 
 ### Added
 
@@ -259,7 +249,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.46] - 2020-09-18
+# [0.0.46] - 2020-09-18
 
 ### Added
 
@@ -273,7 +263,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.45] - 2020-09-18
+# [0.0.45] - 2020-09-18
 
 ### Added
 
@@ -287,7 +277,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.45] - 2020-08-28
+# [0.0.45] - 2020-08-28
 
 ### Added
 
@@ -301,7 +291,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.44] - 2020-08-28
+# [0.0.44] - 2020-08-28
 
 ### Added
 
@@ -315,7 +305,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.45] - 2020-08-26
+# [0.0.45] - 2020-08-26
 
 ### Added
 
@@ -329,7 +319,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.42] - 2020-08-23
+# [0.0.42] - 2020-08-23
 
 ### Added
 
@@ -343,7 +333,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.41] - 2020-08-17
+# [0.0.41] - 2020-08-17
 
 ### Added
 
@@ -357,7 +347,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.40] - 2020-08-06
+# [0.0.40] - 2020-08-06
 
 ### Added
 
@@ -371,7 +361,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.39] - 2020-08-05
+# [0.0.39] - 2020-08-05
 
 ### Added
 
@@ -385,7 +375,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.38] - 2020-08-05
+# [0.0.38] - 2020-08-05
 
 ### Added
 
@@ -399,7 +389,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.37] - 2020-07-31
+# [0.0.37] - 2020-07-31
 
 ### Added
 
@@ -413,7 +403,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.36] - 2020-07-31
+# [0.0.36] - 2020-07-31
 
 ### Added
 
@@ -427,7 +417,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.36] - 2020-07-13
+# [0.0.36] - 2020-07-13
 
 ### Added
 
@@ -441,7 +431,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.35] - 2020-07-13
+# [0.0.35] - 2020-07-13
 
 ### Added
 
@@ -455,7 +445,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.35] - 2020-07-07
+# [0.0.35] - 2020-07-07
 
 ### Added
 
@@ -469,7 +459,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.34] - 2020-07-03
+# [0.0.34] - 2020-07-03
 
 ### Added
 
@@ -483,7 +473,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.33] - 2020-06-19
+# [0.0.33] - 2020-06-19
 
 ### Added
 
@@ -497,7 +487,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.32] - 2020-06-17
+# [0.0.32] - 2020-06-17
 
 ### Added
 
@@ -511,7 +501,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.31] - 2020-05-29
+# [0.0.31] - 2020-05-29
 
 ### Added
 
@@ -527,7 +517,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.30] - 2020-05-10
+# [0.0.30] - 2020-05-10
 
 ### Added
 
@@ -541,7 +531,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.29] - 2020-05-02
+# [0.0.29] - 2020-05-02
 
 ### Added
 
@@ -555,7 +545,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.28] - 2020-05-02
+# [0.0.28] - 2020-05-02
 
 ### Added
 
@@ -569,7 +559,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.27] - 2020-05-02
+# [0.0.27] - 2020-05-02
 
 ### Added
 
@@ -583,7 +573,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.26] - 2020-05-02
+# [0.0.26] - 2020-05-02
 
 ### Added
 
@@ -597,7 +587,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.25] - 2020-05-02
+# [0.0.25] - 2020-05-02
 
 ### Added
 
@@ -611,7 +601,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.24] - 2020-04-04
+# [0.0.24] - 2020-04-04
 
 ### Added
 
@@ -625,7 +615,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.22] - 2020-04-01
+# [0.0.22] - 2020-04-01
 
 ### Added
 
@@ -639,7 +629,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.21] - 2020-03-31
+# [0.0.21] - 2020-03-31
 
 ### Added
 
@@ -653,7 +643,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.20] - 2020-03-27
+# [0.0.20] - 2020-03-27
 
 ### Added
 
@@ -667,7 +657,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.19] - 2020-03-21
+# [0.0.19] - 2020-03-21
 
 ### Added
 
@@ -681,7 +671,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.18] - 2020-03-09
+# [0.0.18] - 2020-03-09
 
 ### Added
 
@@ -695,7 +685,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.17] - 2020-03-08
+# [0.0.17] - 2020-03-08
 
 ### Added
 
@@ -709,7 +699,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.15] - 2020-03-02
+# [0.0.15] - 2020-03-02
 
 ### Added
 
@@ -723,7 +713,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.14] - 2020-02-20
+# [0.0.14] - 2020-02-20
 
 ### Added
 
@@ -737,7 +727,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.13] - 2020-02-17
+# [0.0.13] - 2020-02-17
 
 ### Added
 
@@ -751,7 +741,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.12] - 2020-02-15
+# [0.0.12] - 2020-02-15
 
 ### Added
 
@@ -765,7 +755,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.11] - 2020-02-15
+# [0.0.11] - 2020-02-15
 
 ### Added
 
@@ -779,7 +769,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.10] - 2020-02-13
+# [0.0.10] - 2020-02-13
 
 ### Added
 
@@ -793,7 +783,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.9] - 2020-02-10
+# [0.0.9] - 2020-02-10
 
 ### Added
 
@@ -807,7 +797,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.7] - 2020-02-10
+# [0.0.7] - 2020-02-10
 
 ### Added
 
@@ -821,7 +811,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.6] - 2020-02-10
+# [0.0.6] - 2020-02-10
 
 ### Added
 
@@ -835,7 +825,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.5] - 2020-02-10
+# [0.0.5] - 2020-02-10
 
 ### Added
 
@@ -849,7 +839,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Security
 
-## [0.0.4] - 2020-02-10
+# [0.0.4] - 2020-02-10
 
 ### Added
 
