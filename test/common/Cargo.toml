@@ -10,9 +10,9 @@ crate-type = [ "cdylib", "rlib" ]
 path = "src/common.rs"
 
 [dependencies]
-holochain_wasmer_common = { path = "../../crates/common" }
+holochain_wasmer_common = { path = "../../crates/common" ,version = "0.0.74"}
 serde = "=1.0.123"
 serde_bytes = "0.11"
 
 [dev-dependencies]
-holochain_wasmer_common = { path = "../../crates/common", features = [ "scopetracker_allocator" ]}
+holochain_wasmer_common = { path = "../../crates/common", features = [ "scopetracker_allocator" ],version = "0.0.74"}
