@@ -1,6 +1,6 @@
 name: run tests windows
 
-on: [ push, pull_request ]
+on: [push, pull_request]
 
 jobs:
   test:
@@ -12,4 +12,3 @@ jobs:
           toolchain: stable
           target: wasm32-unknown-unknown
       - run: cargo test -- --nocapture
-      - run: cargo test --manifest-path test/Cargo.toml -- --nocapture
