@@ -8,3 +8,6 @@ members = [
 exclude = [
     "test/**",
 ]
+
+[profile.release.package.test]
+debug = true
