@@ -112,23 +112,37 @@ impl PlruCache for SerializedModuleCache {
 
 impl SerializedModuleCache {
     fn get_with_build_cache(&mut self, key: CacheKey, wasm: &[u8]) -> Result<Module, WasmError> {
+        let s = std::time::Instant::now();
         let store = Store::new(&Universal::new(Cranelift::default()).engine());
+        dbg!(s.elapsed());
+        let s = std::time::Instant::now();
         let module =
             Module::from_binary(&store, wasm).map_err(|e| WasmError::Compile(e.to_string()))?;
+        dbg!(s.elapsed());
+        let s = std::time::Instant::now();
         let serialized_module = module
             .serialize()
             .map_err(|e| WasmError::Compile(e.to_string()))?;
+        dbg!(s.elapsed());
+        let s = std::time::Instant::now();
         self.put_item(key, Arc::new(serialized_module));
+        dbg!(s.elapsed());
         Ok(module)
     }
 
     pub fn get(&mut self, key: CacheKey, wasm: &[u8]) -> Result<Module, WasmError> {
         match self.cache.get(&key) {
             Some(serialized_module) => {
+                let s = std::time::Instant::now();
                 let store = Store::new(&Universal::new(Cranelift::default()).engine());
+                dbg!(s.elapsed());
+                let s = std::time::Instant::now();
                 let module = unsafe { Module::deserialize(&store, serialized_module) }
                     .map_err(|e| WasmError::Compile(e.to_string()))?;
+                dbg!(s.elapsed());
+                let s = std::time::Instant::now();
                 self.touch(&key);
+                dbg!(s.elapsed());
                 Ok(module)
             }
             None => self.get_with_build_cache(key, wasm),
