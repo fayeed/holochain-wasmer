@@ -8,7 +8,7 @@ edition = "2018"
 
 [dependencies]
 # wasmer = "=2.0.0"
-wasmer = { version ="=2.0.0", features = ["wat", "default-singlepass", "default-universal"] }
+wasmer = { version ="=2.0.0", default-features = false, features = ["wat", "default-singlepass", "default-universal"] }
 holochain_wasmer_common = { version = "=0.0.76", path = "../common" }
 holochain_serialized_bytes = "=0.0.51"
 serde = "=1.0.123"
