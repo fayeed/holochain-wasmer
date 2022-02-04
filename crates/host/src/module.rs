@@ -8,10 +8,11 @@ use parking_lot::RwLock;
 use std::collections::BTreeMap;
 use std::sync::atomic::AtomicUsize;
 use std::sync::Arc;
-use wasmer::Cranelift;
+// use wasmer::Cranelift;
 use wasmer::Module;
 use wasmer::Store;
 use wasmer::Universal;
+use wasmer_compiler_singlepass::Singlepass;
 
 pub type CacheKey = [u8; 32];
 pub type PlruKeyMap = BiMap<usize, CacheKey>;
@@ -113,7 +114,7 @@ impl PlruCache for SerializedModuleCache {
 impl SerializedModuleCache {
     fn get_with_build_cache(&mut self, key: CacheKey, wasm: &[u8]) -> Result<Module, WasmError> {
         let s = std::time::Instant::now();
-        let store = Store::new(&Universal::new(Cranelift::default()).engine());
+        let store = Store::new(&Universal::new(Singlepass::default()).engine());
         dbg!(s.elapsed());
         let s = std::time::Instant::now();
         let module =
@@ -134,7 +135,7 @@ impl SerializedModuleCache {
         match self.cache.get(&key) {
             Some(serialized_module) => {
                 let s = std::time::Instant::now();
-                let store = Store::new(&Universal::new(Cranelift::default()).engine());
+                let store = Store::new(&Universal::new(Singlepass::default()).engine());
                 dbg!(s.elapsed());
                 let s = std::time::Instant::now();
                 let module = unsafe { Module::deserialize(&store, serialized_module) }
