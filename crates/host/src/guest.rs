@@ -231,7 +231,14 @@ where
                 }
                 _ => return Err(WasmError { file, line, error }),
             },
-            Err(e) => return Err(wasm_error!(WasmErrorInner::CallError(e.to_string()))),
+            Err(e) => {
+                let e = wasm_error!(WasmErrorInner::CallError(format!(
+                    "Call to {} failed with runtime error message {} ",
+                    f, e
+                )));
+                println!("{}", e.to_string());
+                return Err(e);
+            }
         },
     };
 

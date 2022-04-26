@@ -4,6 +4,10 @@ pub mod wasms;
 use holochain_wasmer_host::prelude::*;
 use test_common::SomeStruct;
 
+pub fn runtime_error(_: &Env, _: GuestPtr, _: Len) -> Result<(), WasmError> {
+    RuntimeError::raise(Box::new(RuntimeError::new_from_trap(Trap::lib(TrapCode::HeapAccessOutOfBounds))));
+}
+
 pub fn short_circuit(_: &Env, _: GuestPtr, _: Len) -> Result<(), WasmError> {
     RuntimeError::raise(Box::new(wasm_error!(WasmErrorInner::HostShortCircuit(
         holochain_serialized_bytes::encode(&String::from("shorts"))

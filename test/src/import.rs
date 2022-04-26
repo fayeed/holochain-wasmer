@@ -3,6 +3,7 @@ use crate::pages;
 use crate::short_circuit;
 use crate::test_process_string;
 use crate::test_process_struct;
+use crate::runtime_error;
 use holochain_wasmer_host::prelude::*;
 
 pub fn memory_only(store: &Store, env: &Env) -> ImportObject {
@@ -24,6 +25,11 @@ pub fn import_object(store: &Store, env: &Env) -> ImportObject {
                 store,
                 env.clone(),
                 holochain_wasmer_host::import::__import_data
+            ),
+            "__runtime_error" => Function::new_native_with_env(
+                store,
+                env.clone(),
+                runtime_error
             ),
             "__short_circuit" => Function::new_native_with_env(
                 store,
