@@ -185,7 +185,7 @@ pub fn wasm_call_n(c: &mut Criterion) {
 pub fn test_process_string(c: &mut Criterion) {
     let mut group = c.benchmark_group("test_process_string");
 
-    let instance = TestWasm::Test.instance();
+    // let instance = TestWasm::Test.instance();
 
     for n in vec![0, 1, 1_000, 1_000_000] {
         group.throughput(Throughput::Bytes(n as _));
@@ -194,7 +194,7 @@ pub fn test_process_string(c: &mut Criterion) {
         group.bench_with_input(BenchmarkId::new("test_process_string", n), &n, |b, _| {
             b.iter(|| {
                 let _: test_common::StringType = holochain_wasmer_host::guest::call(
-                    Arc::clone(&instance),
+                    Arc::clone(&TestWasm::Test.instance()),
                     "process_string",
                     &input,
                 )

@@ -197,4 +197,21 @@ pub mod tests {
             Ok(_) => unreachable!(),
         };
     }
+
+    #[tokio::test(flavor = "multi_thread")]
+    async fn io_test() {
+        // let instance = TestWasm::Io.instance();
+        let mut tasks = vec![];
+        for _n in 0..500000 {
+            tasks.push(tokio::spawn(async move {
+                let _result: String = guest::call(
+                    TestWasm::Io.instance(),
+                    "string_input_ignored_empty_ret",
+                    "",
+                )
+                .unwrap();
+            }))
+        }
+        futures::future::join_all(tasks).await;
+    }
 }

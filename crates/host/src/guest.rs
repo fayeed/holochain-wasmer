@@ -7,6 +7,10 @@ use wasmer::Instance;
 use wasmer::Memory;
 use wasmer::Value;
 
+use std::sync::atomic::{AtomicUsize, Ordering};
+
+static CALL_COUNT: AtomicUsize = AtomicUsize::new(0);
+
 /// write a slice of bytes to the guest in a safe-ish way
 ///
 /// a naive approach would look like this:
@@ -71,12 +75,12 @@ pub fn write_bytes(
     guest_ptr: GuestPtr,
     slice: &[u8],
 ) -> Result<(), wasmer_engine::RuntimeError> {
-    #[cfg(feature = "debug_memory")]
-    tracing::debug!(
-        "writing bytes from host to guest at: {} {}",
-        guest_ptr as u32,
-        slice.len() as u32
-    );
+    // #[cfg(feature = "debug_memory")]
+    // println!(
+    //     "writing bytes from host to guest at: {} {}",
+    //     guest_ptr as u32,
+    //     slice.len() as u32
+    // );
 
     let ptr: WasmPtr<u8, Array> = WasmPtr::new(guest_ptr as _);
     // write the length prefix immediately before the slice at the guest pointer position
@@ -134,12 +138,11 @@ pub fn read_bytes(
     guest_ptr: GuestPtr,
     len: Len,
 ) -> Result<Vec<u8>, wasmer_engine::RuntimeError> {
-    #[cfg(feature = "debug_memory")]
-    tracing::debug!(
-        "reading bytes from guest to host at: {} {}",
-        guest_ptr as u32,
-        len as u32
-    );
+    // #[cfg(feature = "debug_memory")]
+    // println!(
+    //     "reading bytes from guest to host at: {} {}",
+    //     guest_ptr as u32, len as u32
+    // );
 
     let ptr: WasmPtr<u8, Array> = WasmPtr::new(guest_ptr as _);
     Ok(ptr
@@ -181,7 +184,10 @@ where
     I: serde::Serialize + std::fmt::Debug,
     O: serde::de::DeserializeOwned + std::fmt::Debug,
 {
+    CALL_COUNT.fetch_add(1, Ordering::SeqCst);
+    println!("lock {}", CALL_COUNT.load(Ordering::SeqCst));
     let instance = instance.lock();
+    // println!("locked");
     // The guest will use the same crate for decoding if it uses the wasm common crate.
     let payload: Vec<u8> =
         holochain_serialized_bytes::encode(&input).map_err(|e| wasm_error!(e.into()))?;
@@ -292,5 +298,6 @@ where
         ])
         .map_err(|e| wasm_error!(WasmErrorInner::CallError(format!("{:?}", e))))?;
 
+    // println!("unlock");
     return_value.map_err(|e| e.into())
 }

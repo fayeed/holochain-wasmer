@@ -17,6 +17,8 @@ parking_lot = "0.11.1"
 wasmer = "=2.2.0"
 wasmer-engine = "=2.2.0"
 wasmer-middlewares = "=2.2.0"
+tokio = { version = "1.11", features = [ "full"] }
+futures = "0.3"
 
 [dev-dependencies]
 env_logger = "0.8"
