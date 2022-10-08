@@ -200,18 +200,35 @@ pub mod tests {
 
     #[tokio::test(flavor = "multi_thread")]
     async fn io_test() {
-        // let instance = TestWasm::Io.instance();
-        let mut tasks = vec![];
-        for _n in 0..500000 {
-            tasks.push(tokio::spawn(async move {
-                let _result: String = guest::call(
-                    TestWasm::Io.instance(),
-                    "string_input_ignored_empty_ret",
-                    "",
-                )
-                .unwrap();
-            }))
+        use std::sync::mpsc;
+        use std::sync::mpsc::Receiver;
+        use std::sync::mpsc::Sender;
+
+        let instance = TestWasm::Io.instance();
+        // let mut tasks = vec![];
+        let (tx, rx): (Sender<i32>, Receiver<i32>) = mpsc::channel();
+        for _n in 0..1000000 {
+            let instance_clone = instance.clone();
+            let thread_tx = tx.clone();
+            let _ = tokio::task::spawn_blocking(move || {
+                let result: Result<String, _> = guest::call(
+                    // TestWasm::Io.instance(),
+                    instance_clone,
+                    "string_input_args_echo_ret",
+                    ".".repeat(1000),
+                );
+                if result.is_err() {
+                    dbg!(&result);
+                    thread_tx.send(1).unwrap();
+                } else {
+                    thread_tx.send(0).unwrap();
+                }
+            })
+            .await;
+            if rx.recv().unwrap() == 1 {
+                break;
+            }
         }
-        futures::future::join_all(tasks).await;
+        // futures::future::join_all(tasks).await;
     }
 }
