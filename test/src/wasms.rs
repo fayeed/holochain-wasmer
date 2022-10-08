@@ -62,7 +62,7 @@ impl TestWasm {
                     WasmErrorInner::UninitializedSerializedModuleCache => {
                         {
                             let cranelift_fn = || {
-                                let cost_function = |_operator: &Operator| -> u64 { 1 };
+                                let cost_function = |_operator: &Operator| -> u64 { 0 };
                                 let metering = Arc::new(Metering::new(10000000000, cost_function));
                                 let mut cranelift = Cranelift::default();
                                 cranelift.canonicalize_nans(true).push_middleware(metering);

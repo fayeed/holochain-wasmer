@@ -215,7 +215,7 @@ pub mod tests {
                     // TestWasm::Io.instance(),
                     instance_clone,
                     "string_input_args_echo_ret",
-                    ".".repeat(1000),
+                    ".".repeat(1000000),
                 );
                 if result.is_err() {
                     dbg!(&result);
